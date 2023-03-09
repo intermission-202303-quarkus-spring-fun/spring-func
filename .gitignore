@@ -1,0 +1,4 @@
+/src/main/azure/local.settings.json
+extensions.csproj
+obj/
+lib/
