@@ -19,13 +19,14 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <functionAppName>spring-cloud-function-samples</functionAppName>
-        <functionAppRegion>eu</functionAppRegion>
+        <functionAppName>senacor-spring-function-demo</functionAppName>
+        <functionAppRegion>westeurope</functionAppRegion>
         <functionResourceGroup>java-functions-group</functionResourceGroup>
         <functionAppServicePlanName>java-functions-app-service-plan</functionAppServicePlanName>
         <functionDockerImageName>onobc/function-sample-azure-java17:1.0.0</functionDockerImageName>
         <stagingDirectory>${project.build.directory}/azure-functions/${functionAppName}</stagingDirectory>
-        <start-class>com.senacor.func.spring.Config</start-class>
+        <start-class>com.senacor.func.spring.FunctionApp</start-class>
+        <azure.functions.plugin.version>1.21.0</azure.functions.plugin.version>
     </properties>
 
     <dependencies>
@@ -90,7 +91,7 @@
                 <plugin>
                     <groupId>com.microsoft.azure</groupId>
                     <artifactId>azure-maven-functions-plugin</artifactId>
-                    <version>1.21.0</version>
+                    <version>${azure.functions.plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -127,6 +128,7 @@
             <plugin>
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-functions-maven-plugin</artifactId>
+                <version>${azure.functions.plugin.version}</version>
                 <configuration>
                     <resourceGroup>${functionResourceGroup}</resourceGroup>
                     <appName>${functionAppName}</appName>
