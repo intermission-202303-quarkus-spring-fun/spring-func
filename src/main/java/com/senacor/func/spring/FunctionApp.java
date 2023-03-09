@@ -11,10 +11,10 @@ import java.util.Map;
 import java.util.function.Function;
 
 @SpringBootApplication
-public class Config {
+public class FunctionApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(Config.class, args);
+        SpringApplication.run(FunctionApp.class, args);
     }
 
     @Bean
