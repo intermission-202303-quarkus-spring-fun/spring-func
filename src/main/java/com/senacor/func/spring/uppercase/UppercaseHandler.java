@@ -1,4 +1,4 @@
-package com.senacor.func.spring;
+package com.senacor.func.spring.uppercase;
 
 import com.microsoft.azure.functions.ExecutionContext;
 import com.microsoft.azure.functions.HttpMethod;
