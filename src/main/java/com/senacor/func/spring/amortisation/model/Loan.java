@@ -1,9 +1,9 @@
-package com.senacor.func.spring.amortisation;
+package com.senacor.func.spring.amortisation.model;
 
 public class Loan {
-    double totalLoan;
-    double currentInterestRate;
-    double repaymentPerYear;
+    final double totalLoan;
+    final double currentInterestRate;
+    final double repaymentPerYear;
 
     public Loan(double totalLoan, double currentInterestRate, double repaymentPerYear) {
         this.totalLoan = totalLoan;
@@ -11,9 +11,9 @@ public class Loan {
         this.repaymentPerYear = repaymentPerYear;
     }
     public static class Amortization {
-        double totalPaymentAmount;
-        double lastRate;
-        int years;
+        final double totalPaymentAmount;
+        final double lastRate;
+        final int years;
 
         public Amortization(double totalPaymentAmount, double lastRate, int years) {
             this.totalPaymentAmount = totalPaymentAmount;

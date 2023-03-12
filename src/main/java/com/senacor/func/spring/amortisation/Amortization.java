@@ -1,5 +1,6 @@
 package com.senacor.func.spring.amortisation;
 
+import com.senacor.func.spring.amortisation.model.Loan;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Function;

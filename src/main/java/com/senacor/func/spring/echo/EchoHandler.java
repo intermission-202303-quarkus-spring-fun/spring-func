@@ -12,6 +12,7 @@ import org.springframework.messaging.support.MessageBuilder;
 
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 public class EchoHandler extends FunctionInvoker<Message<String>, String> {
 
     @FunctionName("echo")
@@ -24,7 +25,10 @@ public class EchoHandler extends FunctionInvoker<Message<String>, String> {
             HttpRequestMessage<Optional<String>> request,
             ExecutionContext context)
     {
-        var message = MessageBuilder.withPayload(request.getBody().get()).copyHeaders(request.getHeaders()).build();
+        var message = MessageBuilder
+                .withPayload(request.getBody().get())
+                .copyHeaders(request.getHeaders())
+                .build();
         return handleRequest(message, context);
     }
 }

@@ -12,6 +12,7 @@ import org.springframework.messaging.support.MessageBuilder;
 
 import java.util.Optional;
 
+@SuppressWarnings("unused")
 public class UppercaseHandler extends FunctionInvoker<Message<String>, String> {
 
     @FunctionName("uppercase")

@@ -2,7 +2,7 @@ package com.senacor.func.spring;
 
 import com.microsoft.azure.functions.ExecutionContext;
 import com.senacor.func.spring.amortisation.Amortization;
-import com.senacor.func.spring.amortisation.Loan;
+import com.senacor.func.spring.amortisation.model.Loan;
 import org.assertj.core.data.Percentage;
 import org.junit.jupiter.api.Test;
 import org.springframework.cloud.function.adapter.azure.FunctionInvoker;

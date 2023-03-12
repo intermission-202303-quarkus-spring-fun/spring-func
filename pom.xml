@@ -138,7 +138,6 @@
                     <appName>${functionAppName}</appName>
                     <region>${functionAppRegion}</region>
                     <appServicePlanName>${functionAppServicePlanName}</appServicePlanName>
-                    <pricingTier>EP1</pricingTier>
                     <runtime>
                         <os>linux</os>
                         <javaVersion>17</javaVersion>
