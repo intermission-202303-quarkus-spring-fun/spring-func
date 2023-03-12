@@ -26,7 +26,7 @@ public class UppercaseConfig {
 
                 if (executionContext != null) {
                     executionContext.getLogger().info(String.format("Function: %s is uppercasing %s",
-                            executionContext.getFunctionName(), value.toString()));
+                            executionContext.getFunctionName(), value));
                 }
                 return mapper.toString(map);
             } catch (Exception e) {
