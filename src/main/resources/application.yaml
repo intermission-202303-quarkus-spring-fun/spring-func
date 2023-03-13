@@ -1,0 +1,5 @@
+reactor.netty:
+  pool.maxConnections: 1000
+
+spring.cloud.function:
+  scan.packages: com.senacor.func.spring

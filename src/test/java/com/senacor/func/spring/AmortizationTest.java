@@ -6,6 +6,7 @@ import com.senacor.func.spring.amortisation.model.Loan;
 import org.assertj.core.data.Percentage;
 import org.junit.jupiter.api.Test;
 import org.springframework.cloud.function.adapter.azure.FunctionInvoker;
+import reactor.core.publisher.Mono;
 
 import java.util.logging.Logger;
 
@@ -20,8 +21,10 @@ class AmortizationTest {
         // given
         var fixture = new Amortization();
         // when
-        var result = fixture.apply(LOAN);
+        var resultMono = fixture.apply(Mono.just(LOAN));
+        var result = resultMono.block();
         // then
+        assertThat(result).isNotNull();
         assertThat(result.getYears()).isEqualTo(13);
         assertThat(result.getLastRate()).isCloseTo(156.38, Percentage.withPercentage(3.0));
         assertThat(result.getTotalPaymentAmount()).isCloseTo(12_000.00, Percentage.withPercentage(3.0));

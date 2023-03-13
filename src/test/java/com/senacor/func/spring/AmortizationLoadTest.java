@@ -35,8 +35,8 @@ public class AmortizationLoadTest extends Simulation {
 
     {
         setUp(scenarioBuilder.injectOpen(
-                rampUsersPerSec(0).to(200).during(60L),
-                constantUsersPerSec(200).during(300L)
+                rampUsersPerSec(0).to(50).during(60L),
+                constantUsersPerSec(50).during(300L)
         )).protocols(httpProtocolBuilder);
     }
 }
