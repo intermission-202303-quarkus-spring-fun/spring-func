@@ -20,7 +20,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <functionAppName>senacor-spring-function-demo</functionAppName>
-        <functionAppRegion>westeurope</functionAppRegion>
+        <functionAppRegion>northeurope</functionAppRegion>
         <functionResourceGroup>java-functions-group</functionResourceGroup>
         <functionAppServicePlanName>java-functions-app-service-plan</functionAppServicePlanName>
         <functionDockerImageName>onobc/function-sample-azure-java17:1.0.0</functionDockerImageName>
